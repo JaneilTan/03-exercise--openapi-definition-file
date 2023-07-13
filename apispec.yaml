@@ -1,0 +1,23 @@
+openapi: 3.0.2
+info:
+  title: Todo API
+  version: "1.0"
+  contact:
+    name: My name
+    email: email@example.com
+  description: This API allows user to keep track of their tasks
+servers:
+  - url: "http://localhost:5001"
+    description: Development server
+paths:
+  /todos:
+    get:
+      description: Get a list of todos
+      operationId: get-todos
+      tags:
+        - todos
+      responses:
+        "200":
+          description: OK
+tags:
+  - name: todos
